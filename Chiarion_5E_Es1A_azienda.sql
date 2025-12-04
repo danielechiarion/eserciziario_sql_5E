@@ -5,7 +5,7 @@ Remove comments to test them in the environment */
 
 SELECT CustomerName FROM Customers WHERE City="Berlin"; -- select customers from the town of Berlin
 SELECT AVG(Price) FROM Products; -- calculate the average of each product
-SELECT SupplierID,COUNT(ProductID) FROM Products GROUP BY SupplierID;SELECT COUNT(ProductID) as ProductNumber FROM Products AS TabellaProdotti GROUP BY SupplierID; -- count how many products for each supplier and renames attributes
+SELECT SupplierID,COUNT(ProductID) FROM Products GROUP BY SupplierID; SELECT COUNT(ProductID) as ProductNumber FROM Products AS TabellaProdotti GROUP BY SupplierID; -- count how many products for each supplier and renames attributes
 
 SELECT ProductID,ProductName,Price FROM Products WHERE Price=(SELECT MIN(Price) FROM Products); -- select minimum price from the products displayed
 SELECT SupplierID,MAX(Price) FROM Products GROUP BY SupplierID; -- select maximum price for each supplier
